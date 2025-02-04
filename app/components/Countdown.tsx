@@ -34,8 +34,7 @@ const Countdown: React.FC<CountdownProps> = ({ initialSeconds }) => {
   const colorClass =
     seconds <= tempoCorVermelho ? "bg-red-500 border-red-700" :
       seconds <= tempoCorAmarelo ? "bg-yellow-500 border-yellow-700" :
-        // "bg-gray-800 border-gray-700";
-        "bg-[#40414F] border-[#565869]"; // Cinza escuro igual ao ChatGPT
+        "bg-gray-800 border-gray-700";
 
   // Adiciona a animação SOMENTE se `seconds <= tempoCorAmarelo`
   const pulseClass = seconds <= tempoCorAmarelo ? "animate-pulse" : "";
