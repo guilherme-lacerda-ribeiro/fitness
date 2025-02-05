@@ -32,10 +32,10 @@ const Countdown = () => {
     if (!stopBlinking) {
       if (seconds <= tempoCorVermelho) {
         setColorClass("bg-red-500 border-red-700");
-        navigator.vibrate([500, 500]); // Vibração de 500ms com pausa de 500ms
+        navigator.vibrate([250, 250]); // Vibração de 250ms com pausa de 250ms
       } else if (seconds <= tempoCorAmarelo) {
         setColorClass("bg-yellow-500 border-yellow-700");
-        navigator.vibrate([1000, 1000]); // Vibração de 1s com pausa de 1s
+        navigator.vibrate([500, 500]); // Vibração de 500ms com pausa de 500ms
       } else {
         setColorClass("bg-gray-800 border-gray-700");
         navigator.vibrate(0); // Para a vibração
