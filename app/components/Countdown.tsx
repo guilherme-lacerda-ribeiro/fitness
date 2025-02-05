@@ -11,6 +11,10 @@ const Countdown: React.FC<CountdownProps> = ({ initialSeconds }) => {
   const [pulseTrigger, setPulseTrigger] = useState(false); // Estado para forçar a pulsação sincronizada
 
   useEffect(() => {
+    setSeconds(initialSeconds);
+  }, [initialSeconds]);
+  
+  useEffect(() => {
     if (seconds > 0) {
       const timerId = setInterval(() => {
         setSeconds((prevSeconds) => prevSeconds - 1);
@@ -27,8 +31,8 @@ const Countdown: React.FC<CountdownProps> = ({ initialSeconds }) => {
     return `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
   };
 
-  const tempoCorAmarelo = 7;
-  const tempoCorVermelho = 3;
+  const tempoCorAmarelo = 9;
+  const tempoCorVermelho = 4;
   
   // Define a cor com base no tempo restante
   const colorClass =
