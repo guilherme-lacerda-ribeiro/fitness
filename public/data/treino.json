@@ -13,7 +13,7 @@
           "rest": 45,
           "weight": "80",
           "video": "01-Leg 45° - 2x15 a 20 (80kg).mp4",
-          "image": "01-Leg 45° - 2x15 a 20 (80kg).jpg"
+          "image": "01-Leg 45° - 2x15 a 20 (80kg).png"
         },
         {
           "id": 2,
@@ -23,7 +23,7 @@
           "rest": 45,
           "weight": "80",
           "video": "02-Panturrilha (leg 45°) - 2x15 a 20.mp4",
-          "image": "02-Panturrilha (leg 45°) - 2x15 a 20.jpg"
+          "image": "02-Panturrilha (leg 45°) - 2x15 a 20.png"
         },
         {
           "id": 3,
@@ -33,7 +33,7 @@
           "rest": 45,
           "weight": "20 cada lado",
           "video": "03-Puxada articulada - 2x15 (20kg cada lado).mp4",
-          "image": "03-Puxada articulada - 2x15 (20kg cada lado).jpg"
+          "image": "03-Puxada articulada - 2x15 (20kg cada lado).png"
         },
         {
           "id": 4,
@@ -43,7 +43,7 @@
           "rest": 45,
           "weight": "27.5",
           "video": "04-Banco extensor - 2x15 (27.5kg).mp4",
-          "image": "04-Banco extensor - 2x15 (27.5kg).jpg"
+          "image": "04-Banco extensor - 2x15 (27.5kg).png"
         },
         {
           "id": 5,
@@ -53,7 +53,7 @@
           "rest": 45,
           "weight": "30",
           "video": "05-Banco flexor - 2x15 (30kg).mp4",
-          "image": "05-Banco flexor - 2x15 (30kg).jpg"
+          "image": "05-Banco flexor - 2x15 (30kg).png"
         }
       ]
     }
