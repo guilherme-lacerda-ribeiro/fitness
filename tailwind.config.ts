@@ -12,6 +12,15 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        pulseSync: {
+          "0%, 100%": { transform: "scale(1)", opacity: "1" },
+          "50%": { transform: "scale(1.1)", opacity: "0.7" },
+        },
+      },
+      animation: {
+        pulseSync: "pulseSync 1s ease-in-out",
+      },
     },
   },
   plugins: [],

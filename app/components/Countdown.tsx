@@ -6,13 +6,19 @@ interface CountdownProps {
   initialSeconds: number;
 }
 
-const Countdown: React.FC<CountdownProps> = ({ initialSeconds }) => {
+const Countdown = ({ initialSeconds }: CountdownProps) => {
   const [seconds, setSeconds] = useState(initialSeconds);
+  const [pulseTrigger, setPulseTrigger] = useState(false); // Estado para forçar a pulsação sincronizada
 
+  useEffect(() => {
+    setSeconds(initialSeconds);
+  }, [initialSeconds]);
+  
   useEffect(() => {
     if (seconds > 0) {
       const timerId = setInterval(() => {
-        setSeconds(prevSeconds => prevSeconds - 1);
+        setSeconds((prevSeconds) => prevSeconds - 1);
+        setPulseTrigger((prev) => !prev); // Alterna o estado para forçar a re-renderização
       }, 1000);
 
       return () => clearInterval(timerId);
@@ -25,9 +31,27 @@ const Countdown: React.FC<CountdownProps> = ({ initialSeconds }) => {
     return `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
   };
 
+  const tempoCorAmarelo = 9;
+  const tempoCorVermelho = 4;
+  
+  // Define a cor com base no tempo restante
+  const colorClass =
+    seconds <= tempoCorVermelho ? "bg-red-500 border-red-700" :
+      seconds <= tempoCorAmarelo ? "bg-yellow-500 border-yellow-700" :
+        "bg-gray-800 border-gray-700";
+
+  // Adiciona a animação SOMENTE se `seconds <= tempoCorAmarelo`
+  const pulseClass = seconds <= tempoCorAmarelo ? "animate-pulse" : "";
+
   return (
-    <div>
-      <h1>{formatTime(seconds)}</h1>
+    <div className="flex flex-col items-center justify-center w-full bg-gray-900 text-white">
+      <div
+        key={`renderizar-${pulseTrigger}`} // Força a re-renderização para sincronizar a animação
+        // className={`relative flex items-center justify-center w-48 h-48 rounded-full shadow-lg border-4 transition-all duration-1000 ${pulseClass} ${colorClass}`}
+        className={`relative flex items-center justify-center w-48 h-20 px-6 rounded-2xl shadow-lg border-2 transition-all duration-1000 ${pulseClass} ${colorClass}`}
+      >
+        <h1 className="text-5xl font-bold">{formatTime(seconds)}</h1>
+      </div>
     </div>
   );
 };
