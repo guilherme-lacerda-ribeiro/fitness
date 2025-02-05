@@ -44,7 +44,7 @@ const Countdown = ({ initialSeconds }: CountdownProps) => {
   const pulseClass = seconds <= tempoCorAmarelo ? "animate-pulse" : "";
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-screen bg-gray-900 text-white">
+    <div className="flex flex-col items-center justify-center w-full bg-gray-900 text-white">
       <div
         key={`renderizar-${pulseTrigger}`} // Força a re-renderização para sincronizar a animação
         // className={`relative flex items-center justify-center w-48 h-48 rounded-full shadow-lg border-4 transition-all duration-1000 ${pulseClass} ${colorClass}`}

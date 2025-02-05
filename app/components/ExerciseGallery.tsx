@@ -47,7 +47,7 @@ const ExerciseGallery = () => {
   const handlers = useSwipeable({
     onSwipedLeft: handleNext,
     onSwipedRight: handlePrev,
-    preventDefaultTouchmoveEvent: true,
+    preventScrollOnSwipe: true,
     trackMouse: true, // Permite arrastar com o mouse também
   });
 

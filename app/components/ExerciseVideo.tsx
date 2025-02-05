@@ -3,27 +3,31 @@ import { useState } from "react";
 
 interface ExerciseVideoProps {
   videoUrl: string;
+  imageUrl: string;
 }
 
-const ExerciseVideo = ({ videoUrl }: ExerciseVideoProps) => {
+const ExerciseVideo = ({ videoUrl, imageUrl }: ExerciseVideoProps) => {
   const [playing, setPlaying] = useState(false);
+
+  const width = 300;
+  const height = width * 16 / 9;
 
   return (
     <div>
       {playing ? (
         <iframe
-          width="300"
-          height="200"
+          width={width}
+          height={height}
           src={videoUrl}
           title="Vídeo do exercício"
           allowFullScreen
         />
       ) : (
         <Image
-          src={videoUrl}
-          alt="Thumbnail do vídeo"
-          width={300}
-          height={200}
+          src={imageUrl}
+          alt={`Imagem do exercício ${imageUrl}`}
+          width={width}
+          height={height}
           style={{ cursor: "pointer" }}
           onClick={() => setPlaying(true)}
         />
