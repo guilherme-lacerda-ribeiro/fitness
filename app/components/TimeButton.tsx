@@ -4,16 +4,13 @@ import { useState } from "react";
 
 interface TimeButtonProps {
   onTimeSelect: (time: number) => void;
-  defaultTime?: number;
   setStopBlinking: (stopBlinking: boolean) => void;
 }
 
-export default function TimeButton({ onTimeSelect, defaultTime = 30, setStopBlinking }: TimeButtonProps) {
-  const [selectedTime, setSelectedTime] = useState(defaultTime);
+export default function TimeButton({ onTimeSelect, setStopBlinking }: TimeButtonProps) {
   const [pressedTime, setPressedTime] = useState<number | null>(null);
 
   const handleSelect = (time: number) => {
-    setSelectedTime(time);
     setPressedTime(time);
     onTimeSelect(time);
     setStopBlinking(false);

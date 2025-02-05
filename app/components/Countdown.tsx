@@ -9,6 +9,9 @@ const Countdown = () => {
   const [stopBlinking, setStopBlinking] = useState(true); // Estado para parar a animação
   const [colorClass, setColorClass] = useState("bg-gray-800 border-gray-700");
 
+  const tempoCorAmarelo = 9;
+  const tempoCorVermelho = 4;
+
   useEffect(() => {
     if (seconds > 0) {
       const timerId = setInterval(() => {
@@ -18,23 +21,50 @@ const Countdown = () => {
 
       return () => clearInterval(timerId);
     }
-  }, [seconds]);
 
-  const tempoCorAmarelo = 9;
-  const tempoCorVermelho = 4;
+    // Quando atingir zero, toca o bipe
+    if (seconds === 0 && !stopBlinking) {
+      playBeep();
+      handleClick();
+    }
+  }, [seconds]);
 
   // Define a cor com base no tempo restante
   useEffect(() => {
     if (!stopBlinking) {
       if (seconds <= tempoCorVermelho) {
         setColorClass("bg-red-500 border-red-700");
+        navigator.vibrate([500, 500]); // Vibração de 500ms com pausa de 500ms
       } else if (seconds <= tempoCorAmarelo) {
         setColorClass("bg-yellow-500 border-yellow-700");
+        navigator.vibrate([1000, 1000]); // Vibração de 1s com pausa de 1s
       } else {
         setColorClass("bg-gray-800 border-gray-700");
+        navigator.vibrate(0); // Para a vibração
       }
     }
   }, [seconds, stopBlinking]);
+
+  // Função para emitir um bipe
+  const playBeep = () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const AudioContext = window.AudioContext || (window as any).webkitAudioContext; // Suporte a navegadores antigos
+    const audioContext = new AudioContext();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+
+    oscillator.type = 'sine'; // Tipo de onda (senoidal)
+    oscillator.frequency.setValueAtTime(1000, audioContext.currentTime); // Frequência do bipe (1000 Hz)
+
+    gainNode.gain.setValueAtTime(1, audioContext.currentTime); // Volume inicial
+    gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 1); // Redução gradual
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+
+    oscillator.start();
+    oscillator.stop(audioContext.currentTime + 1); // Duração do som em segundos
+  };
 
   const formatTime = (totalSeconds: number) => {
     const minutes = Math.floor(totalSeconds / 60);
@@ -48,6 +78,7 @@ const Countdown = () => {
   const handleClick = () => {
     setStopBlinking(true);
     setColorClass("bg-gray-800 border-gray-700");
+    navigator.vibrate(0); // Para a vibração ao clicar
   }
 
   return (
@@ -63,7 +94,6 @@ const Countdown = () => {
       </div>
       <TimeButton
         onTimeSelect={setSeconds}
-        defaultTime={seconds}
         setStopBlinking={setStopBlinking}
       />
     </>
