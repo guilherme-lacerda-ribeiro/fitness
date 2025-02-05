@@ -30,6 +30,12 @@ const Countdown = () => {
   }, [seconds, stopBlinking]);
 
   useEffect(() => {
+    if (stopBlinking) {
+      setColorClass("bg-gray-800 border-gray-700");
+      navigator.vibrate(0);
+      return; // Evita continuar alterando a cor
+    }
+
     // Define a cor com base no tempo restante
     if (!stopBlinking) {
       if (seconds <= tempoCorVermelho) {
