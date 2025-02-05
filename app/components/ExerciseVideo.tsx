@@ -21,6 +21,7 @@ const ExerciseVideo = ({ videoUrl, imageUrl }: ExerciseVideoProps) => {
           src={videoUrl}
           title="Vídeo do exercício"
           allowFullScreen
+          className="rounded-lg"
         />
       ) : (
         <Image
@@ -30,6 +31,7 @@ const ExerciseVideo = ({ videoUrl, imageUrl }: ExerciseVideoProps) => {
           height={height}
           style={{ cursor: "pointer" }}
           onClick={() => setPlaying(true)}
+          className="rounded-lg"
         />
       )}
     </div>
