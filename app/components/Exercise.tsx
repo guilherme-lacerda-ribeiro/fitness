@@ -15,12 +15,10 @@ interface ExerciseProps {
 const Exercise = ({ id, name, series, repetitions, rest, weight, video, image }: ExerciseProps) => {
   return (
     <div>
-      <h1>Exercício {id}</h1>
-      <h2>{name}</h2>
-      <p>Séries: {series}</p>
-      <p>Repetições: {repetitions}</p>
-      <p>Descanso: {rest} segundos</p>
+      <h1>{id}: {name}</h1>
+      <p>Séries: {series} x {repetitions}</p>
       <p>Peso: {weight}</p>
+      <p>Intervalo: {rest} segundos</p>
       <ExerciseVideo videoUrl={video} imageUrl={image}/>
     </div>
   );
