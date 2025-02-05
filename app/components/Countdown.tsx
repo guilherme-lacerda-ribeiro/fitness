@@ -6,7 +6,7 @@ interface CountdownProps {
   initialSeconds: number;
 }
 
-const Countdown: React.FC<CountdownProps> = ({ initialSeconds }) => {
+const Countdown = ({ initialSeconds }: CountdownProps) => {
   const [seconds, setSeconds] = useState(initialSeconds);
   const [pulseTrigger, setPulseTrigger] = useState(false); // Estado para forçar a pulsação sincronizada
 
