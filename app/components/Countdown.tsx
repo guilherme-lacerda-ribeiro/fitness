@@ -1,20 +1,13 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
+import TimeButton from './TimeButton';
 
-interface CountdownProps {
-  initialSeconds: number;
-}
-
-const Countdown = ({ initialSeconds }: CountdownProps) => {
-  const [seconds, setSeconds] = useState(initialSeconds);
+const Countdown = () => {
+  const [seconds, setSeconds] = useState(0);
   const [pulseTrigger, setPulseTrigger] = useState(false); // Estado para forçar a pulsação sincronizada
-  const [stopBlinking, setStopBlinking] = useState(false); // Estado para parar a animação
+  const [stopBlinking, setStopBlinking] = useState(true); // Estado para parar a animação
   const [colorClass, setColorClass] = useState("bg-gray-800 border-gray-700");
-
-  useEffect(() => {
-    setSeconds(initialSeconds);
-  }, [initialSeconds]);
 
   useEffect(() => {
     if (seconds > 0) {
@@ -41,7 +34,7 @@ const Countdown = ({ initialSeconds }: CountdownProps) => {
         setColorClass("bg-gray-800 border-gray-700");
       }
     }
-  }, [seconds, stopBlinking]); 
+  }, [seconds, stopBlinking]);
 
   const formatTime = (totalSeconds: number) => {
     const minutes = Math.floor(totalSeconds / 60);
@@ -58,15 +51,22 @@ const Countdown = ({ initialSeconds }: CountdownProps) => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center w-full bg-gray-900 text-white">
-      <div
-        key={`renderizar-${pulseTrigger}`} // Força a re-renderização para sincronizar a animação
-        className={`relative flex items-center justify-center w-48 h-20 px-6 rounded-2xl shadow-lg border-2 transition-all duration-1000 ${pulseClass} ${colorClass}`}
-        onClick={handleClick} // Desativa a animação ao clicar
-      >
-        <h1 className="text-5xl font-bold">{formatTime(seconds)}</h1>
+    <>
+      <div className="flex flex-col items-center justify-center w-full bg-gray-900 text-white">
+        <div
+          key={`renderizar-${pulseTrigger}`} // Força a re-renderização para sincronizar a animação
+          className={`relative flex items-center justify-center w-48 h-20 px-6 rounded-2xl shadow-lg border-2 transition-all duration-1000 ${pulseClass} ${colorClass}`}
+          onClick={handleClick} // Desativa a animação ao clicar
+        >
+          <h1 className="text-5xl font-bold">{formatTime(seconds)}</h1>
+        </div>
       </div>
-    </div>
+      <TimeButton
+        onTimeSelect={setSeconds}
+        defaultTime={seconds}
+        setStopBlinking={setStopBlinking}
+      />
+    </>
   );
 };
 
