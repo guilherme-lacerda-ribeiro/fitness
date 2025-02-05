@@ -53,6 +53,13 @@ const ExerciseGallery = () => {
 
   return (
     <div {...handlers} className="relative w-full max-w-lg mx-auto overflow-hidden">
+      <button
+        onClick={handlePrev}
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 text-gray-500"
+      >
+        ◀
+      </button>
+
       {exercises.length > 0 && (
         <div className="flex items-center justify-center">
           <Exercise
@@ -69,16 +76,9 @@ const ExerciseGallery = () => {
         </div>
       )}
 
-      {/* Botões de navegação */}
-      <button
-        onClick={handlePrev}
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-500 bg-opacity-50 text-white p-2 rounded-full"
-      >
-        ◀
-      </button>
       <button
         onClick={handleNext}
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-500 bg-opacity-50 text-white p-2 rounded-full"
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 text-gray-500"
       >
         ▶
       </button>
