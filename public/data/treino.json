@@ -54,6 +54,46 @@
           "weight": "30",
           "video": "05-Banco flexor - 2x15 (30kg).mp4",
           "image": "05-Banco flexor - 2x15 (30kg).png"
+        },
+        {
+          "id": 6,
+          "name": "Abdominal supra máquina",
+          "series": 2,
+          "repetitions": "15",
+          "rest": 45,
+          "weight": "7 placas",
+          "video": "06-Abdominal supra máquina - 2x15 (7 placas).mp4",
+          "image": "06-Abdominal supra máquina - 2x15 (7 placas).png"
+        },
+        {
+          "id": 7,
+          "name": "Supino com barra",
+          "series": 2,
+          "repetitions": "15",
+          "rest": 45,
+          "weight": "20",
+          "video": "07-Supino com barra - 2x15 (20kg total).mp4",
+          "image": "07-Supino com barra - 2x15 (20kg total).png"
+        },
+        {
+          "id": 8,
+          "name": "Tríceps paralela máquina",
+          "series": 2,
+          "repetitions": "15",
+          "rest": 45,
+          "weight": "30",
+          "video": "08-Tríceps paralela máquina - 2x15 (30kg).mp4",
+          "image": "08-Tríceps paralela máquina - 2x15 (30kg).png"
+        },
+        {
+          "id": 9,
+          "name": "Rosca direta barra W",
+          "series": 2,
+          "repetitions": "15",
+          "rest": 45,
+          "weight": "12.5",
+          "video": "09-Rosca direta barra W - 2x15 (12.5kg).mp4",
+          "image": "09-Rosca direta barra W - 2x15 (12.5kg).png"
         }
       ]
     }
