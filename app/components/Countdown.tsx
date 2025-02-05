@@ -27,10 +27,8 @@ const Countdown = () => {
       playBeep();
       handleClick();
     }
-  }, [seconds]);
 
-  // Define a cor com base no tempo restante
-  useEffect(() => {
+    // Define a cor com base no tempo restante
     if (!stopBlinking) {
       if (seconds <= tempoCorVermelho) {
         setColorClass("bg-red-500 border-red-700");
