@@ -27,7 +27,9 @@ const Countdown = () => {
       playBeep();
       handleClick();
     }
+  }, [seconds, stopBlinking]);
 
+  useEffect(() => {
     // Define a cor com base no tempo restante
     if (!stopBlinking) {
       if (seconds <= tempoCorVermelho) {
