@@ -12,30 +12,46 @@ interface ExerciseData {
   image: string;
 }
 
+interface FichaData {
+  id: number;
+  name: string;
+  exercises: ExerciseData[];
+}
+
+interface TreinoData {
+  data: string;
+  fichas: FichaData[];
+}
+
 const ExerciseGallery = () => {
-  const [exercises, setExercises] = useState<ExerciseData[]>([]);
+  const [treino, setTreino] = useState<TreinoData>({
+    data: "",
+    fichas: [],
+  });
 
   useEffect(() => {
-    fetch("/data/exercises.json")
+    fetch("/data/treino.json")
       .then((res) => res.json())
-      .then((data) => setExercises(data)); // FIXME: Corrigir o tipo de `data`
+      .then((data) => setTreino(data));
   }, []);
 
   return (
     <div>
-      {exercises.map((exercise) => (
-      <Exercise
-        key={exercise.id}
-        id={exercise.id} 
-        name={exercise.name} 
-        image={`/assets/images/${exercise.image}`} 
-        series={exercise.series}
-        repetitions={exercise.repetitions}
-        rest={exercise.rest}
-        weight={exercise.weight}
-        video={`/assets/videos/${exercise.video}`}
-      />
-      ))}
+      {treino.fichas.map((ficha) =>
+        ficha.exercises.map((exercise) => (
+          <Exercise
+            key={exercise.id}
+            id={exercise.id}
+            name={exercise.name}
+            image={`/media/images/${exercise.image}`}
+            series={exercise.series}
+            repetitions={exercise.repetitions}
+            rest={exercise.rest}
+            weight={exercise.weight}
+            video={`/media/videos/${exercise.video}`}
+          />
+        ))
+      )}
     </div>
   );
 };
