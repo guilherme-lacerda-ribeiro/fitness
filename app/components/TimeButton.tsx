@@ -18,7 +18,7 @@ export default function TimeButton({ onTimeSelect, defaultTime = 30 }: TimeButto
   const temposPadrao = [30, 45, 60];
 
   return (
-    <div className="flex flex-col items-center gap-2">
+    <div className="flex flex-col items-center gap-2 mb-2">
       <div className="flex gap-2">
         {temposPadrao.map((time) => (
           <button
