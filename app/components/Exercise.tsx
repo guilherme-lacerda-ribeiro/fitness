@@ -16,12 +16,12 @@ const Exercise = ({ id, name, series, repetitions, rest, weight, video, image }:
   return (
     <div className="p-5 rounded-xl shadow-lg w-full max-w-md mx-auto flex flex-col items-center">
       <div>
-        <h2 className="text-2xl font-bold text-white mb-2">
+        <h2 className="titulo-exercicio">
           {id}. {name}
         </h2>
-        <p className="text-sm text-gray-400">Séries: <span className="text-gray-200">{series} x {repetitions}</span></p>
-        <p className="text-sm text-gray-400">Peso: <span className="text-gray-200">{weight} kg</span></p>
-        <p className="text-sm text-gray-400">Intervalo: <span className="text-gray-200">{rest} segundos</span></p>
+        <p className="subtitulo-exercicio">Séries: <span className="descricao-detalhes-exercicio">{series} x {repetitions}</span></p>
+        <p className="subtitulo-exercicio">Peso: <span className="descricao-detalhes-exercicio">{weight} kg</span></p>
+        <p className="subtitulo-exercicio">Intervalo: <span className="descricao-detalhes-exercicio">{rest} segundos</span></p>
       </div>
 
       <div className="mt-3 flex justify-center items-center w-full max-w-md mx-auto overflow-hidden rounded-lg">

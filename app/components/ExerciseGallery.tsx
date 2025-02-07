@@ -55,7 +55,7 @@ const ExerciseGallery = () => {
     <div {...handlers} className="relative w-full max-w-lg mx-auto overflow-hidden">
       <button
         onClick={handlePrev}
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 text-gray-500"
+        className="galeria-botao-navegacao left-0"
       >
         ◀
       </button>
@@ -78,7 +78,7 @@ const ExerciseGallery = () => {
 
       <button
         onClick={handleNext}
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 text-gray-500"
+        className="galeria-botao-navegacao right-0"
       >
         ▶
       </button>

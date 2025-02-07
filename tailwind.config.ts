@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { colors } from "./styles/config/tailwind.colors";
 
 export default {
   content: [
@@ -6,11 +7,13 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class', // Usa a classe 'dark' para ativar o modo escuro
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      colors,
+      fontFamily: {
+        sans: "var(--font-inter), sans-serif",
+        mono: "var(--font-geist-mono), monospace",
       },
       keyframes: {
         pulseSync: {
