@@ -1,9 +1,12 @@
 'use client'
 
-export default function Home() {
+import Calendario from "./components/Calendario";
+
+export default function Inicio() {
 
   return (
-    <div className="h-screen w-full flex flex-col items-center justify-center gap-5">
+    <div className="w-full flex flex-col items-center justify-center gap-5">
+      <Calendario />
     </div>
   );
 }
