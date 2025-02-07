@@ -89,7 +89,7 @@ const Countdown = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-full bg-gray-900 text-white">
+      <div className="flex flex-col items-center justify-center w-full">
         <div
           key={`renderizar-${pulseTrigger}`} // Força a re-renderização para sincronizar a animação
           className={`relative flex items-center justify-center w-48 h-20 px-6 rounded-2xl shadow-lg border-2 transition-all duration-1000 ${pulseClass} ${colorClass}`}

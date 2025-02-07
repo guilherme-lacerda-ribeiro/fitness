@@ -19,3 +19,19 @@ body {
   background: var(--background);
   font-family: var(--font-inter), sans-serif;
 }
+
+.titulo-exercicio {
+  @apply text-2xl font-bold mb-2;
+}
+
+.subtitulo-exercicio {
+  @apply text-sm text-gray-400;
+}
+
+.descricao-detalhes-exercicio {
+  @apply text-gray-200;
+}
+
+.galeria-botao-navegacao {
+  @apply absolute top-1/2 transform -translate-y-1/2 text-gray-500;
+}
