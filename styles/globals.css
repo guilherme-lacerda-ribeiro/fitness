@@ -35,3 +35,11 @@ body {
 .galeria-botao-navegacao {
   @apply absolute top-1/2 transform -translate-y-1/2 text-gray-500;
 }
+
+.calendario-vazio {
+  @apply fill-current text-gray-800 text-sm;
+}
+
+.calendario-preenchido {
+  @apply fill-current text-emerald-600;
+}
