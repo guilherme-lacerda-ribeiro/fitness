@@ -32,12 +32,8 @@ const ContributionsCalendar = ({ contributions }: ContributionsCalendarProps) =>
             if (!value) {
               return 'calendario calendario-vazio';
             }
-            // return `color-github-${value.count}`;
             return `calendario calendario-preenchido`;
           }}
-          tooltipDataAttrs={(value) => ({
-            'data-tip': `${value?.date}: ${value?.count} contributions`,
-          }) as any}
           showWeekdayLabels
         />
       </div>
