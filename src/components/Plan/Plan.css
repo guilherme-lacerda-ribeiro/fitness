@@ -1,6 +1,7 @@
 .exercise {
   text-align: left;
   list-style: none;
+  min-width: 100%;
 }
 
 .exercise h3 {

@@ -1,10 +1,10 @@
-import styles from './Plan.module.css'
+import './Plan.css'
 
 const Plan = ({ exercises }) => {
   return (
     <>
       {exercises.map(exercise => (
-        <li key={exercise.id} className={styles.exercise}>
+        <li key={exercise.id} className="exercise">
           <h3>{exercise.id}. {exercise.name}</h3>
           <div className='exercise_details'>
             <p>Repetições: {exercise.series}</p>

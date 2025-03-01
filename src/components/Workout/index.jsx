@@ -1,4 +1,4 @@
-import styles from "./Workout.module.css";
+import "./Workout.css";
 import { useState } from "react"
 import Plan from "../Plan"
 import { useEffect } from "react"
@@ -16,7 +16,7 @@ const Workout = () => {
   return workoutPlans && (
     <>
       {workoutPlans.map(workout => (
-        <section key={workout.plan} className={styles.workout}>
+        <section key={workout.plan} className="workout slider">
           <h2>💪 {workout.plan}</h2>
           <ol>
             <Plan exercises={workout.exercises}/>
