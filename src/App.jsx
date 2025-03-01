@@ -1,5 +1,6 @@
 import './App.css'
 import './main.css'
+import './slider.css'
 import Calendar from './components/Calendar'
 import Workout from './components/Workout'
 

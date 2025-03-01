@@ -1,0 +1,15 @@
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Ajuste conforme necessário */
+  margin: auto;
+  overflow: hidden;
+}
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}

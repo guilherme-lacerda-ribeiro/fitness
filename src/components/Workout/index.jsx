@@ -18,7 +18,7 @@ const Workout = () => {
       {workoutPlans.map(workout => (
         <section key={workout.plan} className="workout slider">
           <h2>💪 {workout.plan}</h2>
-          <ol>
+          <ol className="slides">
             <Plan exercises={workout.exercises}/>
           </ol>
         </section>
