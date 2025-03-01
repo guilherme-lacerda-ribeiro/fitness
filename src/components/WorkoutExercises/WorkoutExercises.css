@@ -1,0 +1,57 @@
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 90vw;
+  overflow: hidden;
+  margin: auto;
+}
+
+.styled_button {
+  padding: 0;
+  background: rgb(0, 0, 0, 0.5);
+  display: block;
+  width: 25px;
+  height: 100px;
+  margin: 0 0.25rem;
+}
+
+.styled_button::after {
+  color: #c6c6c6;
+  font-weight: 800;
+}
+
+.styled_button:focus,
+.styled_button:active,
+.styled_button:hover,
+.styled_button:focus-visible {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+.prev::after {
+  content: '<';
+}
+
+.next::after {
+  content: '>';
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.workout ol {
+  padding: 0;
+  display: flex;
+}
