@@ -23,8 +23,8 @@ const Workout = () => {
           <h2>💪 {workout.plan}</h2>
           <button onClick={prevSlide}>⬅️</button>
           <button onClick={nextSlide}>➡️</button>
-          <ol className="slides">
-            <Plan exercises={workout.exercises} actualIdxSlide={actualIdxSlide}/>
+          <ol className="slides" style={{transform: `translateX(-${actualIdxSlide*100}%)`}}>
+            <Plan exercises={workout.exercises}/>
           </ol>
         </section>
       ))}

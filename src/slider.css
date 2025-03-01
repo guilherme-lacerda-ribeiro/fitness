@@ -12,8 +12,4 @@
 .slide {
   min-width: 100%;
   box-sizing: border-box;
-  display: none;
-}
-.active {
-  display: block;
 }
