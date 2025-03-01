@@ -1,0 +1,11 @@
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 90vw;
+  overflow: hidden;
+  margin: auto;
+}
+.workout ol {
+  padding: 0;
+  display: flex;
+}
