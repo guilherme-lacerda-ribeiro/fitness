@@ -1,7 +1,7 @@
 .slider {
   position: relative;
   width: 100%;
-  max-width: 600px; /* Ajuste conforme necessário */
+  /* max-width: 600px; */
   margin: auto;
   overflow: hidden;
 }
@@ -12,4 +12,8 @@
 .slide {
   min-width: 100%;
   box-sizing: border-box;
+  display: none;
+}
+.active {
+  display: block;
 }
