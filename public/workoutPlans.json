@@ -1,0 +1,156 @@
+[
+  {
+    "plan": "Ficha A",
+    "exercises": [
+      {
+        "id": 1,
+        "name": "Leg 45°",
+        "series": "2x15 a 20",
+        "weight": "80kg",
+        "thumbnail": "/media/ficha-A-01.png",
+        "video": "ficha-A-01.mp4"
+      },
+      {
+        "id": 2,
+        "name": "Panturrilha (leg 45°)",
+        "series": "2x15 a 20",
+        "weight": "80kg",
+        "thumbnail": "/media/ficha-A-02.png",
+        "video": "ficha-A-02.mp4"
+      },
+      {
+        "id": 3,
+        "name": "Puxada articulada",
+        "series": "2x15",
+        "weight": "20kg cada lado",
+        "thumbnail": "/media/ficha-A-03.png",
+        "video": "ficha-A-03.mp4"
+      },
+      {
+        "id": 4,
+        "name": "Banco extensor",
+        "series": "2x15",
+        "weight": "27.5kg",
+        "thumbnail": "/media/ficha-A-04.png",
+        "video": "ficha-A-04.mp4"
+      },
+      {
+        "id": 5,
+        "name": "Banco flexor",
+        "series": "2x15",
+        "weight": "30kg",
+        "thumbnail": "/media/ficha-A-05.png",
+        "video": "ficha-A-05.mp4"
+      },
+      {
+        "id": 6,
+        "name": "Abdominal supra máquina",
+        "series": "2x15",
+        "weight": "7 placas",
+        "thumbnail": "/media/ficha-A-06.png",
+        "video": "ficha-A-06.mp4"
+      },
+      {
+        "id": 7,
+        "name": "Supino com barra",
+        "series": "2x15",
+        "weight": "20kg total",
+        "thumbnail": "/media/ficha-A-07.png",
+        "video": "ficha-A-07.mp4"
+      },
+      {
+        "id": 8,
+        "name": "Tríceps paralela máquina",
+        "series": "2x15",
+        "weight": "30kg",
+        "thumbnail": "/media/ficha-A-08.png",
+        "video": "ficha-A-08.mp4"
+      },
+      {
+        "id": 9,
+        "name": "Rosca direta barra W",
+        "series": "2x15",
+        "weight": "12.5kg",
+        "thumbnail": "/media/ficha-A-09.png",
+        "video": "ficha-A-09.mp4"
+      }
+    ]
+  },
+  {
+    "plan": "Ficha B",
+    "exercises": [
+      {
+        "id": 1,
+        "name": "Agachamento hammer",
+        "series": "2x15",
+        "weight": "20kg total",
+        "thumbnail": "/media/ficha-B-01.png",
+        "video": "ficha-B-01.mp4"
+      },
+      {
+        "id": 2,
+        "name": "Remada articulada (N)",
+        "series": "2x15",
+        "weight": "50kg total",
+        "thumbnail": "/media/ficha-B-02.png",
+        "video": "ficha-B-02.mp4"
+      },
+      {
+        "id": 3,
+        "name": "Banco abdutor",
+        "series": "2x15",
+        "weight": "65kg",
+        "thumbnail": "/media/ficha-B-03.png",
+        "video": "ficha-B-03.mp4"
+      },
+      {
+        "id": 4,
+        "name": "Tríceps X",
+        "series": "2x15",
+        "weight": "3 placas",
+        "thumbnail": "/media/ficha-B-04.png",
+        "video": "ficha-B-04.mp4"
+      },
+      {
+        "id": 5,
+        "name": "Panturrilha máquina em pé",
+        "series": "2x15",
+        "weight": "25kg 3 furos",
+        "thumbnail": "/media/ficha-B-05.png",
+        "video": "ficha-B-05.mp4"
+      },
+      {
+        "id": 6,
+        "name": "Abdominal Prancha tradicional",
+        "series": "2x45”",
+        "weight": null,
+        "thumbnail": "/media/ficha-B-06.png",
+        "video": null
+      },
+      {
+        "id": 7,
+        "name": "Crucifixo máquina",
+        "series": "2x15",
+        "weight": "40kg regulagens braço 3, assento 5",
+        "thumbnail": "/media/ficha-B-07.png",
+        "video": "ficha-B-07.mp4"
+      },
+      {
+        "id": 8,
+        "name": "Bíceps máquina",
+        "series": "2x15",
+        "weight": "27.5kg",
+        "thumbnail": "/media/ficha-B-08.png",
+        "video": "ficha-B-08.mp4"
+      },
+      {
+        "id": 9,
+        "name": "Abdução de ombros",
+        "series": "2x15",
+        "weight": "3kg",
+        "thumbnail": "/media/ficha-B-09.png",
+        "video": "ficha-B-09.mp4"
+      }
+    ]
+  }
+]
