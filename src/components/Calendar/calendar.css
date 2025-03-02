@@ -1,4 +1,16 @@
-.map svg {
-  stroke: red;
-  fill: red;
+.jan {
+  fill: #0fa88975;
+}
+
+.feb {
+  fill: #0e7ba575;
+}
+
+rect {
+  fill: #00000050;
+  stroke-width: 0;
+}
+
+rect.check {
+  fill: #06fd65b0;
 }
