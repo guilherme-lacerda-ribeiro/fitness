@@ -1,14 +1,18 @@
 .jan {
-  fill: #0fa88975;
+  stroke: #0fa88975;
 }
 
 .feb {
-  fill: #0e7ba575;
+  stroke: #0e7ba575;
+}
+
+.mar {
+  stroke: #620ecf75;
 }
 
 rect {
   fill: #00000050;
-  stroke-width: 0;
+  stroke-width: 2;
 }
 
 rect.check {
