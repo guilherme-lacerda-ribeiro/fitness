@@ -15,6 +15,9 @@ rect {
   stroke-width: 2;
 }
 
-rect.check {
-  fill: #06fd65b0;
+text.check {
+  fill: green;
+  font-size: 8px;
+  stroke-width: 1;
+  stroke: greenyellow;
 }
