@@ -1,0 +1,74 @@
+<svg height="115"
+  xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- Jan -->
+    <rect id="svg_14" height="110" width="62.5" y="5" x="5" stroke-width="0" stroke="#000000" fill="#0fa889"/>
+    <!-- Semana 1 -->
+    <rect id="svg_09" height="10" width="10" y="010" x="010" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="025" x="010" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="040" x="010" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="055" x="010" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="070" x="010" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="085" x="010" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="100" x="010" stroke-width="0" stroke="#000" fill="#000000" />
+    <!-- Semana 2 -->
+    <rect id="svg_09" height="10" width="10" y="010" x="025" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="025" x="025" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="040" x="025" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="055" x="025" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="070" x="025" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="085" x="025" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="100" x="025" stroke-width="0" stroke="#000" fill="#000000" />
+    <!-- Semana 3 -->
+    <rect id="svg_09" height="10" width="10" y="010" x="040" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="025" x="040" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="040" x="040" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="055" x="040" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="070" x="040" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="085" x="040" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="100" x="040" stroke-width="0" stroke="#000" fill="#000000" />
+    <!-- Semana 4 -->
+    <rect id="svg_09" height="10" width="10" y="010" x="055" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="025" x="055" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="040" x="055" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="055" x="055" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="070" x="055" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="085" x="055" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="100" x="055" stroke-width="0" stroke="#000" fill="#000000" />
+    
+    <!-- Fev -->
+    <rect id="svg_14" height="110" width="65" y="5" x="67.5" stroke-width="0" stroke="#000000" fill="#0e7ba5"/>
+    <!-- Semana 1 -->
+    <rect id="svg_09" height="10" width="10" y="010" x="070" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="025" x="070" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="040" x="070" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="055" x="070" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="070" x="070" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="085" x="070" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="100" x="070" stroke-width="0" stroke="#000" fill="#000000" />
+    <!-- Semana 2 -->
+    <rect id="svg_09" height="10" width="10" y="010" x="085" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="025" x="085" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="040" x="085" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="055" x="085" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="070" x="085" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="085" x="085" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="100" x="085" stroke-width="0" stroke="#000" fill="#000000" />
+    <!-- Semana 3 -->
+    <rect id="svg_09" height="10" width="10" y="010" x="100" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="025" x="100" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="040" x="100" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="055" x="100" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="070" x="100" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="085" x="100" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="100" x="100" stroke-width="0" stroke="#000" fill="#000000" />
+    <!-- Semana 4 -->
+    <rect id="svg_09" height="10" width="10" y="010" x="115" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="025" x="115" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="040" x="115" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="055" x="115" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="070" x="115" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="085" x="115" stroke-width="0" stroke="#000" fill="#000000" />
+    <rect id="svg_10" height="10" width="10" y="100" x="115" stroke-width="0" stroke="#000" fill="#000000" />
+  </g>
+</svg>
