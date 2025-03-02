@@ -16,7 +16,7 @@ rect {
 }
 
 text.check {
-  fill: green;
+  fill: greenyellow;
   font-size: 8px;
   stroke-width: 1;
   stroke: greenyellow;
