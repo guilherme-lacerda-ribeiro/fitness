@@ -1,0 +1,24 @@
+.jan { stroke: #0fa88975; }
+.feb { stroke: #0e7ba575; }
+.mar { stroke: #620ecf75; }
+.apr { stroke: rgba(238, 93, 238, 0.425) }
+.may { stroke: rgba(247, 74, 103, 0.562) }
+.jun { stroke: rgba(245, 138, 38, 0.582) }
+.jul { stroke: rgba(223, 211, 52, 0.582) }
+.aug { stroke: rgba(183, 231, 139, 0.932) }
+.sep { stroke: rgba(101, 235, 39, 0.692) }
+.oct { stroke: rgb(38, 158, 189) }
+.nov { stroke: rgb(151, 116, 184) }
+.dec { stroke: rgb(255, 192, 203) }
+
+rect {
+  fill: #00000050;
+  stroke-width: 2;
+}
+
+text.check {
+  fill: greenyellow;
+  font-size: 8px;
+  stroke-width: 1;
+  stroke: greenyellow;
+}

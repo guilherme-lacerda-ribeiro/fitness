@@ -1,5 +1,4 @@
 import TrainingMap from '../TrainingMap';
-import './calendar.css'
 
 const Calendar = () => {
   const language = navigator.language ?? 'en-US'

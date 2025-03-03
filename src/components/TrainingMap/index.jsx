@@ -1,90 +1,82 @@
+import { useEffect } from "react"
+import { useState } from "react"
+import './TrainningMap.css'
+
 const TrainingMap = () => {
   const squareSize = 8
   const squareGap = 2
   const textXOffset = 1
   const textYOffset = 6
 
-  return (
-    <svg height="115"
+  const [daysOfTheYear, setDaysOfTheYear] = useState([])
+
+  useEffect(() => {
+    const thisYear = new Date().getFullYear()
+    const firstDayOfYear = new Date(new Date().getFullYear(), 0, 1)
+    const daysCountInTheYear = (new Date(thisYear, 1, 29).getDate() === 29) ? 366 : 365;
+
+    const daysInThisYear = []
+    for (let index = 0; index < daysCountInTheYear; index++) {
+      const dayOfYear = new Date(firstDayOfYear)
+      dayOfYear.setDate(dayOfYear.getDate() + index)
+      daysInThisYear.push(dayOfYear)
+    }
+    setDaysOfTheYear(daysInThisYear)
+  }, [])
+
+  const getWeekNumber = (date) => {
+    const startOfYear = new Date(date.getFullYear(), 0, 1); // January 1st
+    const startDayOfWeek = startOfYear.getDay(); // 0 = Sunday, 6 = Saturday
+
+    // Find the first Sunday of the year
+    const firstSunday = startDayOfWeek === 0 ? startOfYear
+      : new Date(date.getFullYear(), 0, 1 + (7 - startDayOfWeek));
+
+    // If the given date is before the first Sunday, it belongs to week 1
+    if (date < firstSunday) {
+      return 1;
+    }
+
+    // Calculate the difference in full weeks since the first Sunday
+    const daysDifference = Math.floor((date - firstSunday) / (1000 * 60 * 60 * 24));
+    return Math.floor(daysDifference / 7) + 2; // +2 ensures the first Sunday starts week 2
+  }
+
+  const monthClasses = {
+    0: 'jan',
+    1: 'feb',
+    2: 'mar',
+    3: 'apr',
+    4: 'may',
+    5: 'jun',
+    6: 'jul',
+    7: 'aug',
+    8: 'sep',
+    9: 'oct',
+    10: 'nov',
+    11: 'dec',
+  }
+
+  const getMonthClass = (date) => {
+    return monthClasses[date.getMonth()]
+  }
+
+  return daysOfTheYear && (
+    <svg width="530" height="70"
       xmlns="http://www.w3.org/2000/svg">
       <g>
-        {/* <!-- Semana 1 --> */}
-        <rect height="8" width="8" y="002" x="002" className='jan' />
-        <rect height="8" width="8" y="012" x="002" className='jan' />
-        <rect height="8" width="8" y="022" x="002" className='jan' />
-        <rect height="8" width="8" y="032" x="002" className='jan' />
-        <text y="038" x="003" className='check'>✓</text>
-        <rect height="8" width="8" y="042" x="002" className='jan' />
-        <text y="048" x="003" className='check'>✓</text>
-        <rect height="8" width="8" y="052" x="002" className='jan' />
-        <rect height="8" width="8" y="062" x="002" className='jan' />
+        {daysOfTheYear.map(day => {
+          const squareFullSize = squareSize + squareGap // 8 + 2 = 10
+          const dayOfWeek = day.getDay() // [0-6]
+          const xPos = squareGap + ((getWeekNumber(day) - 1) * squareFullSize) // weekNumber starts with 1
+          const yPos = squareFullSize * dayOfWeek
 
-        {/* <!-- Semana 2 --> */}
-        <rect height="8" width="8" y="002" x="012" className='jan' />
-        <rect height="8" width="8" y="012" x="012" className='jan' />
-        <text y="018" x="013" className='check'>✓</text>
-        <rect height="8" width="8" y="022" x="012" className='jan' />
-        <rect height="8" width="8" y="032" x="012" className='jan' />
-        <text y="038" x="013" className='check'>✓</text>
-        <rect height="8" width="8" y="042" x="012" className='jan' />
-        <rect height="8" width="8" y="052" x="012" className='jan' />
-        <text y="058" x="013" className='check'>✓</text>
-        <rect height="8" width="8" y="062" x="012" className='jan' />
-
-        {/* <!-- Semana 3 --> */}
-        <rect height="8" width="8" y="002" x="022" className='jan' />
-        <rect height="8" width="8" y="012" x="022" className='jan' />
-        <rect height="8" width="8" y="022" x="022" className='jan' />
-        <rect height="8" width="8" y="032" x="022" className='jan' />
-        <rect height="8" width="8" y="042" x="022" className='jan' />
-        <rect height="8" width="8" y="052" x="022" className='jan' />
-        <rect height="8" width="8" y="062" x="022" className='jan' />
-
-        {/* <!-- Semana 4 --> */}
-        <rect height="8" width="8" y="002" x="032" className='jan' />
-        <rect height="8" width="8" y="012" x="032" className='jan' />
-        <rect height="8" width="8" y="022" x="032" className='jan' />
-        <rect height="8" width="8" y="032" x="032" className='jan' />
-        <rect height="8" width="8" y="042" x="032" className='feb' />
-        <rect height="8" width="8" y="052" x="032" className='feb' />
-        <rect height="8" width="8" y="062" x="032" className='feb' />
-
-
-        {/* <!-- Semana 1 --> */}
-        <rect height="8" width="8" y="002" x="042" className='feb' />
-        <rect height="8" width="8" y="012" x="042" className='feb' />
-        <rect height="8" width="8" y="022" x="042" className='feb' />
-        <rect height="8" width="8" y="032" x="042" className='feb' />
-        <rect height="8" width="8" y="042" x="042" className='feb' />
-        <rect height="8" width="8" y="052" x="042" className='feb' />
-        <rect height="8" width="8" y="062" x="042" className='feb' />
-
-        {/* <!-- Semana 2 --> */}
-        <rect height="8" width="8" y="002" x="052" className='feb' />
-        <rect height="8" width="8" y="012" x="052" className='feb' />
-        <rect height="8" width="8" y="022" x="052" className='feb' />
-        <rect height="8" width="8" y="032" x="052" className='feb' />
-        <rect height="8" width="8" y="042" x="052" className='feb' />
-        <rect height="8" width="8" y="052" x="052" className='feb' />
-        <rect height="8" width="8" y="062" x="052" className='feb' />
-
-        {/* <!-- Semana 3 --> */}
-        <rect height="8" width="8" y="002" x="062" className='feb' />
-        <rect height="8" width="8" y="012" x="062" className='feb' />
-        <rect height="8" width="8" y="022" x="062" className='feb' />
-        <rect height="8" width="8" y="032" x="062" className='feb' />
-        <rect height="8" width="8" y="042" x="062" className='feb' />
-        <rect height="8" width="8" y="052" x="062" className='feb' />
-        <rect height="8" width="8" y="062" x="062" className='feb' />
-
-        {/* <!-- Semana 4 --> */}
-        <rect height="8" width="8" y="002" x="072" className='feb' />
-        <rect height="8" width="8" y="012" x="072" className='mar' />
-        <rect height="8" width="8" y="022" x="072" className='mar' />
-        <rect height="8" width="8" y="032" x="072" className='mar' />
-        <rect height="8" width="8" y="042" x="072" className='mar' />
-        <rect height="8" width="8" y="052" x="072" className='mar' />
-        <rect height="8" width="8" y="062" x="072" className='mar' />
+          return <>
+            <rect height={squareSize} width={squareSize} x={xPos} y={yPos} className={getMonthClass(day)} />
+            {/* <text x={xPos + textXOffset} y={yPos + textYOffset} className='check'>✓</text> */}
+          </>
+        }
+        )}
       </g>
     </svg>
   )
